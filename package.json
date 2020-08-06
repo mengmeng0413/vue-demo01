@@ -2,7 +2,7 @@
   "name": "test",
   "version": "1.0.0",
   "description": "A Vue.js project",
-  "author": "赵蒙蒙 <zhaomengmeng@qutoutiao.net>",
+  "author": "赵蒙蒙 <zhaomengmengSX@163.com>",
   "private": true,
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
