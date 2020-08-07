@@ -4,7 +4,7 @@
       <div class="drag" ref="drag">
         <div class="drag-one" ref="leftdiv"></div>
         <div class="line" ref="line" @mousedown="onmouseDown()" @mouseup="onmouseUp()"></div>
-        <div class="drag-two"</div>
+        <div class="drag-two"></div>
       </div>
     </div>
 </template>
