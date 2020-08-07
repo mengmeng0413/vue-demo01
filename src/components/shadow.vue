@@ -42,7 +42,7 @@
   height:200px;
   box-shadow:5px 5px 5px #909090;
   .title{
-    height:20px;
+    height:30px;
     padding:5px;
     margin:0;
     border-bottom:1px #000 solid;
@@ -51,7 +51,7 @@
     box-sizing: border-box;
     margin:0;
     padding:5px;
-    height:170px;
+    height:160px;
   }
 }
  

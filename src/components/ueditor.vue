@@ -25,7 +25,6 @@
 
 <style lang="less">
 .my-editor{
-  margin: 20px auto;
   width: 90%;
 }
 </style>
