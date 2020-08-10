@@ -23,11 +23,12 @@
 
 <style lang="less" scoped>
 .box{
+  box-sizing: border-box;
   display:flex;
   padding:15px;
   flex-wrap: wrap;
   justify-content: space-between;
-  width:612px;
+  width:636px;
   height:612px;
   margin:0 auto;
   div{
