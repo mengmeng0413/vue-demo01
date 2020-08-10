@@ -1,13 +1,12 @@
 <template>
   <div>
     <div class="box">lamp</div>
-    <div class="drag" ref="drag">
+    <div class="drag" ref="drag" @mousemove="onMouseMove($event)">
       <div class="drag-one" ref="leftdiv"></div>
       <div
         class="line"
         ref="line"
         @mousedown="onMouseDown($event)"
-        @mousemove="onMouseMove($event)"
       ></div>
       <div class="drag-two"></div>
     </div>
@@ -36,7 +35,6 @@ export default {
     },
     onMouseUp(event) {
       this.drag = false;
-      this.$refs.line.onmousemove = null;
     }
   },
 };
@@ -86,26 +84,27 @@ export default {
   }
 }
 .drag {
-  width: 501px;
+  width: 700px;
   height: 300px;
   margin: 5px;
   border: 1px #000 solid;
-  background-color: green;
-  position: relative;
+  display: flex;
   .drag-one {
-    position: absolute;
-    left: 0;
-    width: 100px;
+    min-width: 100px;
     height: 100%;
     background-color: pink;
   }
   .line {
-    position: absolute;
-    width: 12px;
-    left: 100px;
+    width: 2px;
     height: 100%;
     cursor: e-resize;
     background-color: white;
+  }
+  .drag-two{
+    background-color: green;
+    width: auto;
+    height: 100%;
+    flex-grow: 1;
   }
 }
 </style>
