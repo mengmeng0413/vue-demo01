@@ -3,28 +3,24 @@
     <div
       @mousedown="divMousedown($event, 1)"
       @mousemove="divMousemove($event, 1)"
-      @mouseup="divMouseUp($event, 1)"
       id="div1"
       ref="div1"
     >1</div>
     <div
       @mousedown="divMousedown($event, 2)"
       @mousemove="divMousemove($event, 2)"
-      @mouseup="divMouseUp($event, 2)"
       id="div2"
       ref="div2"
     >2</div>
     <div
       @mousedown="divMousedown($event, 3)"
       @mousemove="divMousemove($event, 3)"
-      @mouseup="divMouseUp($event, 3)"
       id="div3"
       ref="div3"
     >3</div>
     <div
       @mousedown="divMousedown($event, 4)"
       @mousemove="divMousemove($event, 4)"
-      @mouseup="divMouseUp($event, 4)"
       id="div4"
       ref="div4"
     >4</div>
@@ -45,7 +41,10 @@ export default {
       newtop: 0,
       obj: null
 		}
-	},
+  },
+  mounted(){
+    document.addEventListener('mouseup', this.divMouseUp, true)
+  },
   methods: {
     divMousedown(ev, i) {
       this.obj = this.$refs['div'+i];
@@ -70,7 +69,7 @@ export default {
           this.ordis = this.getStyle(this.obj, "display")
         }
     },
-    divMouseUp(ev, i) {
+    divMouseUp() {
       if(this.obj){
         this.obj.onmousemove = null;
         if(this.obj.offsetLeft>this.$refs.div5.offsetLeft&&
