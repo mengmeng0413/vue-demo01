@@ -1,8 +1,8 @@
 /* eslint-disable */ 
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-import hhh from '../components/hhh.vue';
-import aaa from '../components/aaa.vue';
+import first from '../components/first.vue';
+import slideshow from '../components/slideshow.vue';
 import scroll from '../components/scroll.vue';
 import cascader from '../components/cascader.vue';
 import table from '../components/table.vue';
@@ -30,12 +30,12 @@ Vue.use(VueRouter);
 export default new VueRouter({
   routes: [
     { 
-      path:'/hhh', 
-      component: hhh 
+      path:'/first', 
+      component: first
     },
     {
-      path:'/aaa', 
-      component: aaa 
+      path:'/slideshow', 
+      component: slideshow 
     },
     {
       path:'/scroll', 

@@ -1,15 +1,15 @@
 <template>
   <el-container>
     <el-header>
-      <h-header title="给你header(通过props由父组件传递过来的)" @getMsg="showMsg"></h-header>
+      <!-- <h-header title="给你header(通过props由父组件传递过来的)" @getMsg="showMsg"></h-header> -->
     </el-header>
     <el-container>
       <el-aside width="120px">
         <div class="h">
-          <router-link to="/hhh">hhh</router-link>
+          <router-link to="/first">firstPage</router-link>
         </div>
         <div class="h">
-          <router-link to="/aaa">aaa</router-link>
+          <router-link to="/slideshow">slideshow</router-link>
         </div>
         <div class="h">
           <router-link to="/scroll">页面滚动</router-link>
@@ -84,7 +84,7 @@
       </el-main>
     </el-container>
     <el-footer>
-      <h-footer ref="msg"></h-footer>
+      <!-- <h-footer ref="msg"></h-footer> -->
     </el-footer>
   </el-container>
 </template>
