@@ -6,7 +6,7 @@
     <el-container>
       <el-aside width="120px">
         <div class="h">
-          <router-link to="/first">firstPage</router-link>
+          <router-link to="/">firstPage</router-link>
         </div>
         <div class="h">
           <router-link to="/slideshow">slideshow</router-link>
@@ -115,7 +115,7 @@ export default {
     },
   },
   mounted() {
-    this.$refs.msg.getMessage("我是footer吖！（通过ref由父组件传递过来的)"); //通过ref获取子组件的方法，并向子组件传递信息
+    // this.$refs.msg.getMessage("我是footer吖！（通过ref由父组件传递过来的)"); //通过ref获取子组件的方法，并向子组件传递信息
   },
 };
 </script>

@@ -30,7 +30,7 @@ Vue.use(VueRouter);
 export default new VueRouter({
   routes: [
     { 
-      path:'/first', 
+      path:'/', 
       component: first
     },
     {
