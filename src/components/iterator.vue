@@ -58,10 +58,10 @@
         <span style="margin:10px;padding:20px;">看看内联元素</span>
 
       
-        <div v-for="(item,index) in menu" >
-          <div v-for="(item1,index1) in item">
+        <div v-for="(item,index) in menu" :key="index">
+          <div v-for="(item1,index1) in item" :key="index1">
               <ul>
-                  <li v-for="item2 in item1">{{item2}}</li>
+                  <li v-for="(item2,index2) in item1" :key="index2">{{item2}}</li>
               </ul>
           </div>
         </div>
