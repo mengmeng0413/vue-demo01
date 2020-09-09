@@ -36,6 +36,7 @@
       <el-button @click="twoQueue" type="primary" size="small">两个队列实现一个栈</el-button>
       <el-button @click="promiseall" type="primary" size="small">promiseall</el-button>
       <el-button @click="maptest" type="primary" size="small">maptest</el-button>
+      <el-button @click="promiseRace" type="primary" size="small">promiseRace</el-button>
       <br>
       <div v-if="false">
         <el-radio-group style="margin:10px;" v-model="radio">
@@ -721,6 +722,17 @@
         console.log(Number.prototype)
          let a = (2).add(3).reduce(1)
         console.log(a)
+      },
+      promiseRace(){
+        let first = new Promise((resolve, reject) => {
+          setTimeout(resolve, 10000, '第一个')
+        })
+        let second = new Promise((resolve, reject) => {
+          setTimeout(resolve, 2000, '第二个')
+        })
+        Promise.race([first, second]).then(result =>{
+          console.log(result)
+        }) 
       }       
     }
   }
