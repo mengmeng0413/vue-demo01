@@ -3,6 +3,7 @@
       <el-button type="success" @click="tryAsync">Async</el-button>
       <el-button type="success" @click="tryAsync2">Async2</el-button>
       <el-button type="success" @click="tryAsync3">Async3</el-button>
+      <el-button type="success" @click="tryAsync4">Async4</el-button>
       <el-button type="success" @click="getGenertor">Genertor</el-button>
       <el-button type="success" @click="promise1">promise1</el-button>
       <el-button type="success" @click="promise2">promise2</el-button>
@@ -64,12 +65,31 @@
       async bbb(){
         this.texts = await this.settime()
         console.log(this.texts)
+        console.log('mengmeng')
       },
       settime(){
         return new Promise((resolve, reject) => {
           setTimeout(() => {
             resolve('zhao')
           },2000)
+        })
+      },
+      tryAsync4(){
+        const promiseToDoSomething = () => {
+          return new Promise(resolve => {
+            setTimeout(() => resolve('做些事情 '), 3000)
+          })
+        }
+        const watchOverSomeoneDoingSomething = async() => {
+          const something = await promiseToDoSomething()
+          return something + '查看 '
+        }
+        const watchOverSomeoneWatchingSomeoneDoingSomething = async() => {
+          const something = await watchOverSomeoneDoingSomething()
+          return something + '再次查看 '
+        }
+        watchOverSomeoneWatchingSomeoneDoingSomething().then(res => {
+          console.log(res)
         })
       },
       getGenertor(){
