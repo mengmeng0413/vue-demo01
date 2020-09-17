@@ -29,7 +29,7 @@
     //   console.log('让我看看这个listeners长什么样呀',this.$listeners) //input事件和focus事件
     // },
     mounted(){
-      console.log('aaa的子组件')
+      console.log('slideshow的子组件')
     },
     data () {
         return {
