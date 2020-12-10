@@ -134,6 +134,14 @@ a {
   text-decoration: none;
   color: slategrey;
 }
+.el-aside {
+  position: fixed;
+  top: 100px;
+  left: 10px;
+}
+.el-main {
+  margin-left: 120px;
+}
 .el-header .el-footer{
 	height: 30px;
 }
